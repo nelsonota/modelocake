@@ -1,0 +1,5 @@
+tipo,pedi_tipo,pedi_baixado,pedi_clie_cnpjcpf,pedi_clie_nome,pedi_forn_cnpjcpf,pedi_forn_nome,pedi_vend_cnpjcpf_estoque,pedi_vend_cnpjcpf
+P,C,"2019-07-06 12:00:01",,,"52173606000122","Akosa","26800298875","26800298875"
+tipo,ipit_prod_codigo_interno,ipit_quantidade,ipit_valor_realizado
+I,"0502",1,59.95
+I,"0501",2,59.95

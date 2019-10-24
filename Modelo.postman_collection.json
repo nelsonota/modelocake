@@ -1,0 +1,885 @@
+{
+	"info": {
+		"_postman_id": "632c950c-c5ae-4ea7-967a-614c444a50cc",
+		"name": "ComercioWeb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cnpj\":\"52173606000123\",\r\n  \"razao_social\":\"Empresa 1\",\r\n  \"nome\":\"Nelson Tatsuo Ota\",\r\n  \"email\":\"nelsonota2@gmail.com\",\r\n  \"password\":\"1234\",\r\n  \"password_confirm\":\"1234\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/empresa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"empresa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"usua_email\":\"nelsonota@gmail.com\",\"usua_senha\":\"123\"}"
+						},
+						"url": {
+							"raw": "http://localhost/api/usuario/login",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"210"
+							],
+							"path": [
+								"api",
+								"usuario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25vdGFAZ21haWwuY29tIn0.GmUrK28CY8sXgTYdt7e2r3nxlT2hHq-zJJprbBPkzpQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25vdGFAZ21haWwuY29tIiwiZXhwIjoxNTU2OTM1MzIzfQ.kLd1tT3SxbzPK11FBRwQKzkA3wnVybhetdBlE0PT41M ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Usuario2\",\n    \"email\": \"usuario2@gmail.com\",\n    \"password\": \"1234\",\n    \"password_confirm\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25vdGFAZ21haWwuY29tIiwiZXhwIjoxNTU2OTM1MzIzfQ.kLd1tT3SxbzPK11FBRwQKzkA3wnVybhetdBlE0PT41M ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"prod_codigo_interno\": \"0511\",\n\t\"prod_codigo_externo\": \"0511\",\n\t\"prod_cor\": \"PRETO\",\n\t\"prod_deleted\": null,\n\t\"prod_descricao\": \"Conj Bela Chic\",\n\t\"prod_empr_codigo\": 1,\n\t\"prod_modified\": null,\n\t\"prod_status\": 1,\n\t\"prod_tamanho\": \"M\",\n\t\"prod_unidade\": \"PC\",\n\t\"prod_usua_codigo\": 1,\n\t\"prod_valor\": \"79,90\",\n\t\"prod_valor_custo\": \"59,95\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"prod_codigo\": 1,\n\t\"prod_codigo_externo\": \"0511\",\n\t\"prod_cor\": \"PRETO\",\n\t\"prod_deleted\": null,\n\t\"prod_descricao\": \"Conj Bela Chic\",\n\t\"prod_empr_codigo\": 1,\n\t\"prod_modified\": null,\n\t\"prod_status\": 1,\n\t\"prod_tamanho\": \"M\",\n\t\"prod_unidade\": \"PC\",\n\t\"prod_usua_codigo\": 1,\n\t\"prod_valor\": \"79,90\",\n\t\"prod_valor_custo\": \"59,95\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/produto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "model",
+								"value": "produto",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/nelson/Downloads/produtos.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/importacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"importacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Importação-Processar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/importacao/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"importacao",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Importação-Listar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/importacao/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"importacao",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fornecedor",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/fornecedor?sort=forn_nome&forn_nome=Ag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"fornecedor"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "forn_nome"
+								},
+								{
+									"key": "forn_nome",
+									"value": "Ag"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendedor",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/vendedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"vendedor"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PedidoCompra",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/pedido_compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"pedido_compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pedi_forn_codigo\": 1,\n\t\"pedi_vend_codigo_estoque\":1,\n\t\"pedi_vend_codigo\":1,\n\t\"pite_pedido_item\": [\n\t\t{\n\t\t\t\"pite_prod_codigo\":4,\n\t\t\t\"pite_quantidade\":1,\n\t\t\t\"pite_valor\":1,\n\t\t\t\"pite_valor_custo\":1,\n\t\t\t\"pite_valor_realizado\":1\n\t\t},\n\t\t{\n\t\t\t\"pite_prod_codigo\":5,\n\t\t\t\"pite_quantidade\":1,\n\t\t\t\"pite_valor\":1,\n\t\t\t\"pite_valor_custo\":1,\n\t\t\t\"pite_valor_realizado\":1\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/pedido_compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"pedido_compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Visualizar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/pedido_compra/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"pedido_compra",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "model",
+								"value": "pedido_compra",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/media/nelson/Dados/docker/comercioweb/server/tests/Csv/pedidos.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/importacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"importacao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PedidoTransferencia",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/pedido_transferencia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"pedido_transferencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pedi_forn_codigo\": 1,\n\t\"pedi_vend_codigo_estoque\":1,\n\t\"pedi_vend_codigo\":1,\n\t\"pite_pedido_item\": [\n\t\t{\n\t\t\t\"pite_prod_codigo\":4,\n\t\t\t\"pite_quantidade\":1,\n\t\t\t\"pite_valor\":1,\n\t\t\t\"pite_valor_custo\":1,\n\t\t\t\"pite_valor_realizado\":1\n\t\t},\n\t\t{\n\t\t\t\"pite_prod_codigo\":5,\n\t\t\t\"pite_quantidade\":1,\n\t\t\t\"pite_valor\":1,\n\t\t\t\"pite_valor_custo\":1,\n\t\t\t\"pite_valor_realizado\":1\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/pedido_transferencia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"pedido_transferencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Visualizar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/pedido_transferencia/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"pedido_transferencia",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PedidoVenda",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/pedido_venda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"pedido_venda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pedi_clie_codigo\": 1,\n\t\"pedi_vend_codigo_estoque\":1,\n\t\"pedi_vend_codigo\":1,\n\t\"pite_pedido_item\": [\n\t\t{\n\t\t\t\"pite_prod_codigo\":4,\n\t\t\t\"pite_quantidade\":1,\n\t\t\t\"pite_valor\":1,\n\t\t\t\"pite_valor_custo\":1,\n\t\t\t\"pite_valor_realizado\":1\n\t\t},\n\t\t{\n\t\t\t\"pite_prod_codigo\":5,\n\t\t\t\"pite_quantidade\":1,\n\t\t\t\"pite_valor\":1,\n\t\t\t\"pite_valor_custo\":1,\n\t\t\t\"pite_valor_realizado\":1\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/pedido_venda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"pedido_venda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Visualizar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWxzb25AYWtvc2EuY29tLmJyIn0.QuAvcYKxgCcxb4SECMcK1Q8j3TTvnLNnbJMzmLH2ZLI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/pedido_venda/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"pedido_venda",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
